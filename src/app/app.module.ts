@@ -16,6 +16,7 @@ import { InglesComponent } from './pages/ingles/ingles.component';
 import { EspanholComponent } from './pages/espanhol/espanhol.component';
 import { DepoimentosComponent } from './pages/depoimentos/depoimentos.component';
 import { ContatoComponent } from './pages/contato/contato.component';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { ContatoComponent } from './pages/contato/contato.component';
   ],
   imports: [
     BrowserModule,
+    MatGridListModule,
     AppRoutingModule,
     MatMenuModule,
     MatButtonModule,
