@@ -11,3 +11,12 @@ body {
   position: relative;
   overflow-x: hidden;
 }
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #e9c6cf; /* seu rosa do topo */
+}
+app-root {
+  display: block;
+  background: transparent;
+}
