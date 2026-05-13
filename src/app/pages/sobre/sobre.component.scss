@@ -1,0 +1,339 @@
+:host {
+  display: block;
+  padding: 24px 0 32px;
+  font-family: 'Montserrat', sans-serif;
+  color: #1f2f36;
+}
+
+/* =========================
+   ESTRUTURA GERAL
+========================= */
+
+.about-page {
+  width: 1100px;
+  min-height: 700px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* =========================
+   BASE CARTOON
+========================= */
+
+.fun-card,
+.fun-card-soft,
+.photo-card {
+  background: #e9dfc9;
+  border: 4px solid #1f2f36;
+  box-shadow: 7px 7px 0 #1f2f36;
+  color: #1f2f36;
+}
+
+.fun-card {
+  border-radius: 26px;
+  overflow: hidden;
+}
+
+.fun-card-soft {
+  border-radius: 22px;
+  padding: 22px 28px;
+}
+
+.card-strip {
+  height: 32px;
+  background: #f4c63d;
+  border-bottom: 4px solid #1f2f36;
+}
+
+.card-content {
+  padding: 22px 28px;
+}
+
+/* =========================
+   FOTO
+========================= */
+
+.photo-card {
+  position: absolute;
+  left: -40px;
+  top: 45px;
+
+  width: 255px;
+  height: 540px;
+
+  border-radius: 22px;
+  padding: 18px;
+  z-index: 4;
+}
+
+.photo-placeholder {
+  width: 100%;
+  height: 100%;
+
+  border: 3px dashed #1f2f36;
+  border-radius: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: 5px;
+}
+
+.photo-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  border: 3px solid #1f2f36;
+  border-radius: 18px;
+}
+
+/* =========================
+   CARDS RETOS E DESENCONTRADOS
+========================= */
+
+.about-card {
+  position: absolute;
+  left: 295px;
+  top: 12px;
+
+  width: 530px;
+  min-height: 205px;
+
+  z-index: 3;
+}
+
+.experience-card {
+  position: absolute;
+  left: 500px;
+  top: 220px;
+
+  width: 625px;
+  min-height: 178px;
+
+  z-index: 3;
+}
+
+.vision-card {
+  position: absolute;
+  left: 305px;
+  top: 430px;
+
+  width: 575px;
+  min-height: 205px;
+
+  z-index: 3;
+}
+
+/* =========================
+   TEXTOS
+========================= */
+
+h2 {
+  margin: 0 0 14px;
+
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  color: #1f2f36;
+}
+
+h3 {
+  margin: -4px 0 12px;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #1f2f36;
+}
+
+p {
+  margin: 0 0 12px;
+  line-height: 1.45;
+  font-size: 14px;
+  color: #1f2f36;
+}
+
+.experience-card p {
+  margin-bottom: 9px;
+  line-height: 1.35;
+  font-size: 13px;
+}
+
+/* =========================
+   ADEREÃ‡OS CARTOON LIMPOS
+========================= */
+
+.decor {
+  position: absolute;
+  pointer-events: none;
+}
+
+/* # fica como sticker, mas nÃ£o cobre texto */
+.bubble-hash {
+  left: 266px;
+  top: -22px;
+
+  width: 94px;
+  height: 106px;
+
+  overflow: visible;
+  z-index: 6;
+}
+
+.bubble-hash path,
+.star-shape path,
+.vision-crown path {
+  stroke: #1f2f36;
+  stroke-width: 4px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.bubble-hash path {
+  fill: #ff7a00;
+}
+
+.bubble-hash text {
+  fill: #1f2f36;
+  font-family: Arial, sans-serif;
+  font-size: 54px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+/* estrela lateral, sem encostar nos cards */
+.star-shape {
+  right: -2px;
+  top: 132px;
+
+  width: 115px;
+  height: 115px;
+
+  overflow: visible;
+  transform: rotate(8deg);
+  z-index: 6;
+}
+
+.star-shape path {
+  fill: #ff7a00;
+}
+
+/* cÃ­rculo amarelo encaixado no canto do card Sobre */
+.circle-yellow {
+  left: 800px;
+  top: 74px;
+
+  width: 46px;
+  height: 46px;
+
+  background: #f4c63d;
+  border: 4px solid #1f2f36;
+  border-radius: 50%;
+
+  box-shadow: 4px 4px 0 #1f2f36;
+  z-index: 6;
+}
+
+/* grid fica atrÃ¡s, decorativo e leve */
+.grid-shape {
+  right: 0;
+  bottom: 18px;
+
+  width: 210px;
+  height: 170px;
+
+  background-image:
+    linear-gradient(#1f2f36 1px, transparent 1px),
+    linear-gradient(90deg, #1f2f36 1px, transparent 1px);
+  background-size: 32px 32px;
+
+  opacity: 0.22;
+  z-index: 1;
+}
+
+/* =========================
+   HOVER DOS CARDS
+========================= */
+
+.fun-card,
+.fun-card-soft {
+  transition: all 0.15s ease;
+}
+
+.fun-card:hover,
+.fun-card-soft:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 4px 4px 0 #1f2f36;
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 900px) {
+  :host {
+    padding: 24px 16px;
+  }
+
+  .about-page {
+    width: 100%;
+    min-height: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .photo-card,
+  .about-card,
+  .experience-card,
+  .vision-card {
+    position: static;
+    width: auto;
+    min-height: auto;
+  }
+
+  .photo-card {
+    height: 360px;
+  }
+
+  .decor {
+    display: none;
+  }
+}
+.vision-card {
+  position: absolute;
+  left: 305px;
+  top: 415px;
+  width: 575px;
+  min-height: 205px;
+  z-index: 3;
+  overflow: visible;
+}
+
+.vision-crown {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+
+  width: 56px;
+  height: 43px;
+
+  transform: rotate(10deg);
+  z-index: 12;
+  overflow: visible;
+}
+
+.crown-top {
+  fill: #f4c63d;
+}
+
+.crown-base {
+  fill: #f4c63d;
+}
